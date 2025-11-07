@@ -84,7 +84,7 @@ header {
 
 @media (max-width: 468px) {
     header {
-        height: 80vh;
+        height: 75vh;
     }
 }
 
