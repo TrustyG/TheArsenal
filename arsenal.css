@@ -720,7 +720,7 @@ just to give it something to go back to when nothing is happening*/
         min-width: 95% !important;
         /* lock to the same value to prevent runtime resizing */
         scroll-snap-align: center;
-        scroll-snap-stop: normal;
+        scroll-snap-stop: always;
         display: flex;
         min-height: 0;
         justify-content: center;
