@@ -1,0 +1,807 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#smooth-wrapper {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#smooth-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    will-change: transform;
+}
+
+.f-dance {
+    font-family: "Dancing Script", cursive;
+}
+
+.f-greatv {
+    font-family: "Great Vibes", cursive;
+    font-size: 30px;
+
+}
+/* Custom breakpoint for 468px and below */
+@media (max-width: 468px) {
+  .d-custom-block {
+    display: block !important;
+  }
+  .d-custom-none {
+    display: none !important;
+  }
+}
+
+footer-svg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+
+@media (max-width:540px) {
+    .f-greatv {
+        font-size: 20px;
+    }
+}
+
+.f-sat {
+    font-family: "Satisfy", cursive;
+    font-size: 32px;
+}
+
+body {
+
+    margin: 0;
+    overflow-y: auto;
+    font-family: "FF Zwo", "Helvetica Neue", Arial, sans-serif;
+
+}
+
+header {
+    height: 110vh;
+}
+
+@media (max-width: 468px) {
+    header {
+        height: 93vh;
+    }
+}
+
+.logoo {
+    height: 100px;
+    width: 105px;
+}
+
+@media (max-width: 468px) {
+    .logoo {
+        height: 77px;
+        width: 80px;
+    }
+}
+
+
+
+.navbar {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.navbar,
+.navbar .nav-link,
+.navbar .navbar-brand {
+
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.9rem;
+}
+
+.navbar .nav-link {
+
+    font-size: 0.9rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+    color: rgb(236, 27, 27) !important;
+    /* optional hover accent */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.6s ease-in-out;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.collapse navbar-collapse{
+ transition: all 0.6s ease-in-out;
+}
+
+/* Optional: make icons slightly smaller and vertically centered */
+.nav-link i {
+    font-size: 1.1rem;
+    position: relative;
+    /*making the icon relative to the its respective text*/
+    top: 1px;
+}
+
+.my-display-lg {
+    font-size: calc(2rem + 3vw);
+}
+
+
+@media (max-width: 468px) {
+    .my-display-lg {
+        font-size: calc(1.25rem + 2.5vw);
+    }
+}
+
+/* -------------------------- */
+.my-display-ma {
+    font-size: calc(2rem + 2vw);
+}
+
+@media (max-width: 468px) {
+    .my-display-ma {
+        font-size: calc(1.25rem + 4vw);
+    }
+}
+
+/* -------------------------- */
+.my-display-mal {
+    font-size: calc(2rem + 4vw);
+}
+
+@media (max-width: 468px) {
+    .my-display-mal {
+        font-size: calc(1.25rem + 6vw);
+    }
+}
+
+.collection {
+    filter: brightness(0.6);
+}
+
+
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+
+
+
+
+
+.reveal {
+  
+    opacity: 0;
+    transform: translateY(60px);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+        opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    /* gives the opacity animation aspect 1.2s total time*/
+    /*cubic-bezier is used to regulate how fase the animation uses the 1.2s the above value is standard as it gives a slow start fast middle and smooth ending*/
+    will-change: transform, opacity;
+    /* performance optimization and kind of like giving the system heads up on wha you're about to do before hand*/
+
+}
+
+
+.reveal.active {
+    /* this contains or shows how the elements look after it has animated in*/
+    opacity: 1;
+    /* make elements visible */
+    transform: translateY(0);
+    /* move back to original position on the Y axis */
+
+}
+
+.content {
+    padding: 120px 10%;
+    color: white;
+    line-height: 1.5;
+    background: black;
+}
+
+.content>h1 {
+
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    max-width: 900px;
+}
+
+.will {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10%;
+}
+
+.will a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    width: 250px;
+    text-align: center;
+    background-color: transparent;
+
+}
+
+.will a:hover {
+    background-color: rgb(41, 19, 19);
+    transition: background-color 0.3s ease;
+
+}
+
+.title {
+
+    max-width: 700px;
+    padding-bottom: 1px;
+
+}
+
+.tit {
+
+    font-weight: 800;
+    color: white;
+
+}
+
+.tit1 {
+
+    font-weight: 800;
+    background: linear-gradient(90deg, red, #ffffff, red, #ffffff);
+    background-size: 300% 100%;
+    /* this makes the gradient 3x wider than the text giving it more room to move when we animate it  */
+    -webkit-background-clip: text;
+    /* this tells the browser that the background(gradient) shiuld only be contained in the letters anything outside the letters remain transparent */
+    background-clip: text;
+    color: rgb(255, 173, 173);
+    /* we dont want the text's color interfering with the grsadient's so we make it transparent or invisible */
+    animation: slideGradient 6s linear infinite;
+    -webkit-font-smoothing: antialiased;
+    /* Makes the edges of the text look smoother (less jagged) */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    /* Adds a tiny, soft shadow to make the text stand out just a little bit more. */
+}
+
+@keyframes slideGradient {
+
+    0% {
+        background-position: 0% 50%;
+        text-shadow: 0 0 6px white
+    }
+
+    50% {
+        background-position: 100% 50%;
+        text-shadow: 0 0 12px red
+    }
+
+    100% {
+        background-position: 0% 50%;
+        text-shadow: 0 0 6px white
+    }
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.tit2 {
+
+    font-weight: 800;
+    background: linear-gradient(90deg, red, #ffffff, red, #ffffff);
+    background-size: 300% 100%;
+    /* this makes the gradient 3x wider than the text giving it more room to move when we animate it  */
+    -webkit-background-clip: text;
+    /* this tells the browser that the background(gradient) shiuld only be contained in the letters anything outside the letters remain transparent */
+    background-clip: text;
+    color: rgb(255, 173, 173);
+    /* we dont want the text's color interfering with the grsadient's so we make it transparent or invisible */
+    animation: slideGradient2 6s linear infinite;
+    -webkit-font-smoothing: antialiased;
+    /* Makes the edges of the text look smoother (less jagged) */
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    /* Adds a tiny, soft shadow to make the text stand out just a little bit more. */
+}
+
+@keyframes slideGradient2 {
+
+    0% {
+        background-position: 0% 50%;
+        text-shadow: 0 0 18px white
+    }
+
+    50% {
+        background-position: 100% 50%;
+        text-shadow: 0 0 36px red
+    }
+
+    100% {
+        background-position: 0% 50%;
+        text-shadow: 0 0 18px white
+    }
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.reveal2 {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out, filter 1.2s ease-out;
+}
+
+.reveal2.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+@media (max-width: 425px) {
+    .will a {
+        font-size: 12px;
+        width: 150px;
+        height: 37px;
+    }
+}
+
+.fan {
+    position: relative;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    /* inner background */
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* The animated gradient border */
+.fan::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* this makes the border cover the whole button as in top:0 bottom:0 left:0 right:0*/
+    padding: 2px;
+    /* border thickness */
+    border-radius: inherit;
+    /* Keeps the rounded corners same as the button.*/
+    background: linear-gradient(90deg,
+            /* #ff0040, #ff8c00, #ffe600, #00ff6a, #00c3ff, #7a00ff, #ff0040 */
+            red, white, red, white);
+    background-size: 400%;
+    /* this makes the gradient 4x wider than the button giving it more room to move when we animate it... smaller the x more the colours show */
+    animation: glowing 6s linear infinite;
+    -webkit-mask:
+        /* this hides the middle so only the edges glow*/
+        linear-gradient(#fff 0 0) content-box,
+        /*1 Removes overlapping areas (makes the hole in the middle).*/
+        linear-gradient(#fff 0 0);
+    /*2 Removes overlapping areas (makes the hole in the middle).*/
+    -webkit-mask-composite: xor;
+    /* this means show where only one mask is visible*/
+    mask-composite: exclude;
+    /* does the same thing as wwbkit.. but it keeps the behavior consistent across browsers. cause fireforx doesnt support webkit*/
+    z-index: -1;
+
+    /* so basically, number one give a white coloring to the content box (edges)
+    number two gives a white coloring to the whole button
+    then the xor/exclude makes it so that only one of the white colorings show up by cutting where the white colorings overlap (the middle)
+    */
+}
+
+.fan2 {
+    position: relative;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    /* inner background */
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.fan2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: linear-gradient(90deg,
+            red, white, red, white);
+    background-size: 400%;
+    animation: glowing2 6s linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+
+
+}
+
+.card-grid:hover .fan2,
+.card-grid:focus-within .fan2 {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.card-grid:hover .fan2::before,
+.card-grid:focus-within .fan2::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+@media (max-width: 425px) {
+
+    .fan2,
+    .fan2::before {
+        opacity: 1 !important;
+    }
+}
+
+
+
+@keyframes glowing2 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.showcase {
+    padding: 40px 0;
+    background: #000;
+}
+
+/* ----------------------------------------------------slide-in animation-------------------------------------- */
+
+
+.card-row {
+    display: flex;
+    gap: 1.7rem;
+    margin-bottom: 1.25rem;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    /*prevents cols going to the next-line when theres no space*/
+}
+
+/* ensure Bootstrap columns inside the .card-row behave as flex items */
+.card-row>.col-sm-12,
+.card-row>.col-md-6 {
+    display: flex;
+    flex: 1 1 0;
+    /* alowing adjustments*/
+    transition: flex 0.7s cubic-bezier(0.22, 0.8, 0.36, 1);
+    min-width: 0;
+}
+
+/* your visual card */
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    overflow: hidden;
+    height: var(--bs-card-height, 320px);
+    transition: transform 0.6s cubic-bezier(0.22, 0.8, 0.36, 1);
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)18%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)18%); */
+    background-color: #1a1a1a !important;
+
+}
+
+/* card body spacing */
+.card-body {
+    padding: 2rem;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+
+.card-card-top-shadow,
+.card-card-bottom-shadow {
+    pointer-events: none;
+}
+
+/* if you prefer class-based instead of inline styles: */
+.card-grid>.top-shadow {
+    position: absolute;
+    inset: 0 0 auto 0;
+    /* top:0; left:0; right:0 */
+    height: 36%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.899), rgba(0, 0, 0, 0));
+}
+
+.card-grid>.bottom-shadow {
+    position: absolute;
+    inset: auto 0 0 0;
+    /* bottom:0; left:0; right:0 */
+    height: 36%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.899), rgba(0, 0, 0, 0));
+}
+
+
+
+
+.card-text {
+
+    transition: opacity 0.35s ease, transform 0.35s ease;
+
+}
+
+.card-link {
+    text-decoration: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+
+
+
+}
+
+/* default flex sizing inside pair: equal halves 
+just to give it something to go back to when nothing is happening*/
+
+.card-row>.col-sm-12,
+.card-row>.col-md-6 {
+    flex: 1 1 50%;
+
+}
+
+.card-row>.col-sm-12:hover,
+.card-row>.col-sm-6:hover {
+    flex: 1 1 55%;
+
+}
+
+.card-row>.col-sm-12:hover~.col-sm-12,
+.card-row>.col-sm-6:hover~.col-sm-6 {
+    flex: 1 1 45%;
+}
+
+/* -------Actually makes everything happen----- */
+.card-row:hover>.col-sm-12:not(:hover),
+.card-row:hover>.col-md-6:not(:hover) {
+    flex: 1 1 45%;
+}
+
+/* ---------------------------------------------------- end of slide-in animation-------------------------------------- */
+
+
+.card .card-text {
+    color: #fff;
+}
+
+.card.card-title {
+    color: #fff;
+}
+
+.fss {
+    font-size: 80px !important;
+    font-weight: 300 !important;
+}
+
+/* ----------------------------------------------------------------GOD DID-------------------------------------------------- */
+
+
+
+@media (max-width: 767.98px) {
+
+    /* track */
+    .mobile-track {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        padding: 0.6rem 1rem;
+        box-sizing: border-box;
+        scroll-padding-inline: calc((100% - 90%) / 2);
+        -webkit-transform: translateZ(0);
+        /* GPU accel */
+        align-items: stretch;
+    }
+
+
+    .mobile-track>.container,
+    .mobile-track .row,
+    .mobile-track .card-row {
+        display: contents;
+    }
+
+
+    .card-row>.col-sm-12,
+    .card-row>.col-md-6,
+    .mobile-track .col-sm-12,
+    .mobile-track .col-md-6 {
+        transition: none !important;
+        -webkit-transition: none !important;
+    }
+
+
+    .mobile-track .col-sm-12,
+    .mobile-track .col-md-6 {
+        flex: 0 0 95% !important;
+        flex-shrink: 0 !important;
+        /* ensure no shrinking */
+        max-width: 95% !important;
+        min-width: 95% !important;
+        /* lock to the same value to prevent runtime resizing */
+        scroll-snap-align: center;
+        scroll-snap-stop: normal;
+        display: flex;
+        min-height: 0;
+        justify-content: center;
+    }
+
+
+    .mobile-track .card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: calc(var(--bs-card-height, 320px) * 0.70);
+        box-sizing: border-box;
+        border-radius: 18px;
+    }
+
+    .mobile-track .card-body {
+        padding: 1.25rem;
+    }
+
+    .mobile-track .card-text {
+        padding: 1rem;
+    }
+
+    /*does things before and after the considered elements*/
+    .mobile-track::before,
+    .mobile-track::after {
+        content: "";
+        flex: 0 0 calc((100% - 95%) / 2);
+        min-width: calc((100vw - 95vw) / 2);
+    }
+
+
+    .mobile-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-track {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* dots */
+    .mobile-dots {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        padding: .6rem 0 1rem;
+    }
+
+    .mobile-dots .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 0;
+        background: #cfcfcf;
+        padding: 0;
+        transition: transform .18s, background .18s;
+    }
+
+    .mobile-dots .dot.active {
+        background: #111;
+        transform: scale(1.25);
+    }
+
+}
+
+/* ----------------------------------------------------------------GOD THANK YOU OO-------------------------------------------------- */
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .card-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card {
+        flex: none;
+        width: 100%;
+        height: 420px !important;
+    }
+
+
+
+}
